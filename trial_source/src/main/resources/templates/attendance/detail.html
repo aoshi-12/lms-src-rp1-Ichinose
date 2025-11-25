@@ -86,13 +86,14 @@
 			const minutes = ('0' + today.getMinutes()).slice(-2);
 			return hours + ':' + minutes;
 		}
-		window.onload = function () {
-          if (notEnterFlg) {
-            alert("過去日の勤怠に未入力があります。");
-            <button id="dialogOkButton">OK</button>
-          }
-        };
+		
+        ;
 	</script>
+	<div th:if="${notEnteredCheck}">
+    <script>
+        alert("過去日の勤怠に未入力があります。");
+    </script>
+</div>
 
 </body>
 </html>
